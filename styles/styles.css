@@ -184,7 +184,7 @@ toggle-wrapper {
 .target-word {
   display: flex;
   justify-content: center;
-  flex: 1 0 auto;
+  flex: 0 0 20%;
   align-items: end;
 }
 
@@ -206,7 +206,7 @@ toggle-wrapper {
 .letter-wrapper {
   display: flex;
   flex-grow: 1;
-  padding-bottom: 5%;
+  /* padding-bottom: 5%; */
 }
 
 .letter-container {
