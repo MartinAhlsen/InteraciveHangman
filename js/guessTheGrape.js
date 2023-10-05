@@ -70,7 +70,6 @@ const makeLetterBoxes = () => {
   let parentElement = document.createElement("div");
   parentElement.classList.add("letter-container");
   for (let i = 97; i <= 122; i++) {
-    // alphabetArray.push(String.fromCharCode(i)); GÅR ATT TA BORT
     let letterDiv = document.createElement("div");
     parentElement.appendChild(letterDiv);
     letterDiv.classList.add("letters");
@@ -95,7 +94,6 @@ const generateTargetWordLetters = () => {
   Array.from(targetRandomWord.toLowerCase()).forEach((element) => {
     let newDiv = document.createElement("div");
     newDiv.classList.add("target-word-letters");
-    // console.log(element);
     newDiv.classList.add(element.toUpperCase());
     newDiv.textContent = element.toUpperCase();
     parentElement.appendChild(newDiv);
@@ -122,21 +120,13 @@ const showGuessesHideVictoryScreen = () => {
   endSceren.classList.add("hide");
 };
 
-// const presentCorrectWord = () => {
-//   let word = document.querySelector(".present-correct-word");
-//   // word.textContent =  <<<<<< starta här och lyft ut random word >>>>>>>>>>>>>>>>
-// };
-
 let letterWrapper = document.querySelector(".letter-wrapper");
 letterWrapper.appendChild(makeLetterBoxes());
 
 const doesItMatch = (letter) => {
-  // console.log(letter);
   if (targetRandomWord.toLowerCase().includes(letter)) {
-    // console.log("Match!");
     return true;
   } else {
-    // console.log("Doesn't match");
     return false;
   }
 };
@@ -241,11 +231,6 @@ const gameLoop = (letter, targetElement) => {
       endOfGame(didIWin());
     }
   }
-  console.log(targetRandomWord);
-  console.log(targetRandomWordUniqueLettersArray.length);
-  console.log(targetRandomWordUniqueLettersArray);
-  console.log(correctGuesses.length);
-  console.log(correctGuesses);
 };
 
 const lettersClickable = () => {
@@ -259,58 +244,3 @@ const lettersClickable = () => {
 };
 
 lettersClickable();
-
-// const testFunction = () => {
-//   let word = "bananaAAAABB";
-//   let array1 = Array.from(word.toLowerCase());
-//   let newArray = [];
-
-//   array1.forEach((char) => {
-//     console.log("newArray: " + newArray);
-//     if (newArray.includes(char)) {
-//       console.log("includes" + char);
-//     } else {
-//       newArray.push(char);
-//       console.log("does nor include " + char);
-//     }
-//   });
-//   console.log("newArray " + newArray);
-// };
-// const testFunction = () => {
-//   // let testArray = ["a", "a", "a", "a", "a", "a", "a", "aa", "a", "a"];
-//   targetRandomWordArray = [Array.from(targetRandomWord.toLowerCase())];
-//   console.log("targetRandomWordArray " + targetRandomWordArray);
-//   let uniqueArray = [];
-//   console.log("uniqueArray before loop" + uniqueArray);
-//   for (let i = 0; i < targetRandomWordArray.length; i++) {
-//     console.log(i);
-//     if (!uniqueArray.includes(targetRandomWordArray[i])) {
-//       console.log("letter " + targetRandomWordArray[i]);
-//       uniqueArray.push(targetRandomWordArray[i]);
-//     }
-//   }
-//   console.log("targetRandomWordArray " + targetRandomWordArray);
-//   console.log("uniqueArray after loop" + uniqueArray);
-
-//   // console.log(testArray);
-// };
-
-// const testFunction = () => {
-//   // let testArray = ["a", "a", "a", "a", "a", "a", "a", "aa", "a", "a"];
-//   targetRandomWordArray = [Array.from(targetRandomWord.toLowerCase())];
-//   console.log("targetRandomWordArray " + targetRandomWordArray);
-//   let uniqueArray = [];
-//   console.log("uniqueArray before loop" + uniqueArray);
-//   for (let i = 0; i > targetRandomWordArray.length; i++) {
-//     console.log(i);
-//     if (uniqueArray.includes(targetRandomWordArray[i])) {
-//       console.log("letter " + targetRandomWordArray[i]);
-//       uniqueArray.push(targetRandomWordArray[i]);
-//     }
-//   }
-//   console.log("targetRandomWordArray " + targetRandomWordArray);
-//   console.log("uniqueArray after loop" + uniqueArray);
-//   // console.log(testArray);
-// };
-
-// testFunction();
