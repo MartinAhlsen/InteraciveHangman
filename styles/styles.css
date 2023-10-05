@@ -69,11 +69,9 @@ toggle-wrapper {
   display: flex;
   flex: 1 0 100%;
   flex-direction: column;
-  /* margin: 10%; */
 }
 
 .game-info>* {
-  /* margin: 0 3vw; */
   padding: 10px;
   background-color: rgba(173, 216, 230, 0.22);
   text-align: center;
@@ -93,7 +91,6 @@ toggle-wrapper {
 }
 
 .guesses-wrapper {
-  /* background-color: lightgray; */
   display: flex;
   flex: 0 0 30%;
   color: black;
@@ -112,10 +109,7 @@ toggle-wrapper {
   padding: 0;
   margin: 0;
   margin-right: 5vw;
-  /* text-shadow: 0px 0px 1px rgba(255, 255, 255, 1); */
   padding: 10px;
-  /* background-color: rgba(173, 216, 230, 0.199); */
-  /* border-radius: 10px; */
   color: white;
 }
 
@@ -124,9 +118,6 @@ toggle-wrapper {
 }
 
 .game-wrapper>* {
-  /* padding: 16px; */
-  /* border: 2px solid white; */
-  /* margin: 16px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,10 +141,6 @@ toggle-wrapper {
   margin: 4vh auto;
 }
 
-/* .start-button-game {
-  color: blue;
-}
-*/
 .start-button-end {
   padding: 20px;
 }
@@ -169,8 +156,8 @@ toggle-wrapper {
 }
 
 .guesses-image {
-  height: calc(519 / 960 * 12vw);
-  width: 12vw;
+  height: calc(519 / 960 * 12%);
+  width: 12%;
   margin: 1%;
   background-image: url(../resources/grape_bunch.png);
   background-position: center;
@@ -200,11 +187,9 @@ toggle-wrapper {
   justify-content: center;
   align-items: center;
   font-size: 0%;
-  /* color: rgba(255, 255, 255, 0); */
 }
 
 .show-text {
-  /* color: rgb(255, 255, 255); */
   font-size: 8vw;
 }
 
@@ -215,11 +200,9 @@ toggle-wrapper {
 }
 
 .letter-container {
-  /* margin-top: 50px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* flex: 1 0 auto; */
 }
 
 .letters {
