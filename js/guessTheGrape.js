@@ -158,6 +158,7 @@ const didIWin = () => {
 };
 
 const endOfGame = (result) => {
+  numberOfGames += 1;
   let showTargetWordLetters = document.querySelectorAll(".target-word-letters");
   showTargetWordLetters.forEach((element) => {
     if (!element.classList.contains("show-text")) {
@@ -196,7 +197,6 @@ const startNewGame = () => {
     });
   };
   correctGuesses = [];
-  numberOfGames += 1;
   guessesLeft = 10;
 
   updateCounterText();
