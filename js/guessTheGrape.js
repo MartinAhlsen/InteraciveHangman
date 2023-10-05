@@ -24,7 +24,7 @@ let correctGuesses = [];
 let targetRandomWord = "";
 let targetRandomWordLowerCase = null;
 let targetRandomWordUniqueLettersArray = null;
-let numberOfGames = -1;
+let numberOfGames = 0;
 let numberOfVictories = 0;
 let guessesLeft = 10;
 
