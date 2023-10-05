@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <!-- <script src="../js/toggle-buttons.js" defer></script> -->
+    <script src="../js/guessTheGrape.js" defer></script>
+    <title>Guess the Grape</title>
+  </head>
+  <body>
+    <header>
+      <h1>Guess the grape</h1>
+      <h3>A hangman style game</h3>
+      <!-- <toggle-wrapper>
+        <div class="toggle-hide hide-start-screen">Toggle Start-screen</div>
+        <div class="toggle-hide hide-game">Toggle Game</div>
+        <div class="toggle-hide hide-end-screen">Toggle End-screen</div>
+        <div class="toggle-hide hide-all">Hide All</div>
+      </toggle-wrapper> -->
+    </header>
+    <main-content class="main-content">
+      <game-container class="game-container">
+        <start-screen class="game-wrapper start-screen">
+          <div class="welcome-message">Welcome!</div>
+          <div class="game-introduction">Can you guess the grape?</div>
+          <div class="start-button start-button-start">Start game</div>
+        </start-screen>
+        <game-screen class="game-wrapper game-screen">
+          <game-info class="game-info">
+            <p class="start-button start-button-game">New game</p>
+            <p class="number-of-games">Games:</p>
+            <p class="number-of-victories">Victories:</p>
+          </game-info>
+          <guesses-wrapper class="guesses-wrapper">
+            <guesses-p-container class="guesses-p-container">
+              <p class="guesses-left-text">Guesses left:</p>
+            </guesses-p-container>
+            <guesses-image-container
+              class="guesses-image-wrapper"
+            ></guesses-image-container>
+          </guesses-wrapper>
+          <!-- end-screen had class game-wrapper -->
+          <end-screen class="end-screen">
+            <p class="outcome-message"></p>
+            <p class="start-button start-button-end">Play another round!</p>
+          </end-screen>
+          <target-word class="target-word"></target-word>
+          <letter-wrapper class="letter-wrapper"></letter-wrapper>
+        </game-screen>
+      </game-container>
+    </main-content>
+  </body>
+</html>

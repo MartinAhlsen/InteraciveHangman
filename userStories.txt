@@ -1,0 +1,41 @@
+FUNKTIONALITET
+Att se överskriften gör att beräfta att jag hamnat rätt
+Jag ska kunna starta spelet genomm att trycka på en knapp
+Spelet ska starta utan att sidan laddas om
+Jag ska informeras om spelets regler
+Jag vill att bokstäver jag gissat på ska få en färg beroende på om jag gissat rätt eller fel
+Jag vill veta om jag vunnit eller förlorat
+jag vill kunna starta ett nytt spel när spelet är slut
+Jag vill kunna starta ett nytt spel även under pågående spel
+
+STYLE
+Jag vill att bakgrunden ska ha vintema
+Jag vill att färgpaletten ska ha vintema
+Jag vill ha tydliga kontraster så att det är lätt att se vad som är viktigt
+
+KOD
+Skapa en array med alfabetets bokstäver
+Skapa en array med druvnamn
+Matcha bokstaven mot ordet
+
+
+en funktion som skapar HTML för .letters
+    en funktion som skapar eventListeners
+
+en funktion som skapar HTML för .word-letters
+
+en funktion som döljer element
+
+En funktion som räknar ned
+    en counter-variabel
+    en del av funktionen som minskar countern
+
+
+
+array med Grapes
+välj en slumpad Grape
+target Grape
+
+array med player choices
+
+innehåller 
