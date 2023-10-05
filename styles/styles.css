@@ -270,6 +270,6 @@ toggle-wrapper {
   }
 
   .guesses-image-wrapper {
-    margin: auto;
+    margin: 0;
   }
 }
