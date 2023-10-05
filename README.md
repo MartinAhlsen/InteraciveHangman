@@ -1,3 +1,2 @@
 # InteraciveHangman
-# InteraciveHangman
-/indes.html
+<a href="./index.html"></a>
