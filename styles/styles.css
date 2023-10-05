@@ -3,7 +3,8 @@
 }
 
 :root {
-  --target-size: 5vh;
+  --target-size: 6vw;
+  --target-max-size: 50px;
   --letter-size: 5vh;
 }
 
@@ -289,5 +290,23 @@ h1 {
 
   .game-introduction {
     font-size: 6vh;
+  }
+}
+
+@media only screen and (min-width: 830px) {
+  .target-word-letters {
+    height: var(--target-max-size);
+    width: var(--target-max-size);
+    margin: 1.5%;
+    border-bottom: solid 5px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0%;
+    padding: 2px;
+  }
+
+  .show-text {
+    font-size: var(--target-max-size);
   }
 }
