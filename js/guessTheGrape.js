@@ -1,38 +1,53 @@
 let grapeArray = [
   "Cabernet Sauvignon",
-  // "Merlot",
-  // "Chardonnay",
-  // "Syrah",
-  // "Zinfandel",
-  // "Riesling",
-  // "Malbec",
-  // "Grenache",
-  // "Tempranillo",
-  // "Viognier",
-  // "Sangiovese",
-  // "Muscat",
-  // "Semillon",
-  // "Verdejo",
-  // "Marsanne",
-  // "Zweigelt",
-  // "Rondinella",
-  // "Corvina",
-  // "Sagrantino",
-  // "Glera",
-  // "Gammay",
+  "Merlot",
+  "Chardonnay",
+  "Syrah",
+  "Zinfandel",
+  "Riesling",
+  "Malbec",
+  "Grenache",
+  "Tempranillo",
+  "Viognier",
+  "Sangiovese",
+  "Muscat",
+  "Semillon",
+  "Verdejo",
+  "Marsanne",
+  "Zweigelt",
+  "Rondinella",
+  "Corvina",
+  "Sagrantino",
+  "Glera",
+  "Gammay",
+  "Pinot Noir",
+  "Pinot Gris",
+  "Chenin Blanc",
+  "Petit Verdot",
+  "Cabernet Franc",
+  "Petite Sirah",
+  "Sauvignon Blanc",
+  "Barbera",
+  "Carmenere",
+  "Albarino",
+  "Viura",
+  "Mencia",
+  "Grenache Blanc",
+  "Vermentino",
+  "Nebbiolo",
+  "Montepulciano",
+  "Dolcetto",
+  "Primitivo",
+  "Trebbiano",
+  "Aligote",
+  "Sangiovese Grosso",
+  "Falanghina",
+  "Garganega",
+  "Arneis",
+  "Verdelho",
+  "Tannat",
+  "Negroamaro",
 ];
-// let modifiedGrapeArray = [];
-// const replaceSpacesWithDashes = (anArray) => {
-//   for (let i = 0; i < anArray.length; i++) {
-//     if (anArray[i] === " ") {
-//       modifiedGrapeArray.append("-");
-//     } else {
-//       modifiedGrapeArray.append(anArray[i]);
-//     }
-//   }
-// };
-// replaceSpacesWithDashes(grapeArray);
-// console.log(modifiedGrapeArray);
 
 let modifiedGrapeArray = [];
 
