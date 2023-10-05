@@ -1,2 +1,2 @@
 # InteraciveHangman
-<a href="./index.html"></a>
+<a href="./index.html">Link to game</a>
