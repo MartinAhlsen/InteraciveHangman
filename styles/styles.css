@@ -48,15 +48,15 @@ h1 {
   margin: 3vh;
 }
 
-toggle-wrapper {
+/* toggle-wrapper {
   display: flex;
-}
+} */
 
-.toggle-hide {
+/* .toggle-hide {
   color: white;
   margin: 10px;
   text-align: center;
-}
+} */
 
 .main-content {
   display: flex;
@@ -110,8 +110,8 @@ toggle-wrapper {
   text-align: end;
   padding: 0;
   margin: 0;
-  margin: 0 0 0 5vw;
-  padding: 10px;
+  margin-left: 5vw;
+  /* padding: 10px; */
   color: white;
 }
 
@@ -186,23 +186,25 @@ toggle-wrapper {
 .target-word {
   display: flex;
   justify-content: center;
-  flex: 0 0 20%;
+  flex: 0 0 12%;
   align-items: end;
+  margin-bottom: 3%;
 }
 
 .target-word-letters {
   height: 6vw;
   width: 6vw;
-  margin: 5px;
+  margin: 1.5%;
   border-bottom: solid 5px black;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 0%;
+  padding: 2px;
 }
 
 .show-text {
-  font-size: 8vw;
+  font-size: 6vw;
 }
 
 .letter-wrapper {
@@ -273,5 +275,13 @@ toggle-wrapper {
 
   .guesses-image-wrapper {
     margin: 0;
+  }
+
+  .welcome-message {
+    font-size: 8vh;
+  }
+
+  .game-introduction {
+    font-size: 6vh;
   }
 }
