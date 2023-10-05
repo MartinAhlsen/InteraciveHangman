@@ -2,9 +2,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --target-size: 5vh;
+  --letter-size: 5vh;
+}
+
 html {
   height: 100%;
-  /* height: 100vh; */
 }
 
 body {
@@ -12,7 +16,6 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  /* height: 100vh; */
   position: relative;
 }
 
@@ -47,16 +50,6 @@ header>* {
 h1 {
   margin: 3vh;
 }
-
-/* toggle-wrapper {
-  display: flex;
-} */
-
-/* .toggle-hide {
-  color: white;
-  margin: 10px;
-  text-align: center;
-} */
 
 .main-content {
   display: flex;
@@ -111,13 +104,14 @@ h1 {
   padding: 0;
   margin: 0;
   margin-left: 5vw;
-  /* padding: 10px; */
   color: white;
 }
 
 .start-screen>* {
   margin: 2vh;
 }
+
+
 
 .game-wrapper>* {
   display: flex;
@@ -189,11 +183,12 @@ h1 {
   flex: 0 0 12%;
   align-items: end;
   margin-bottom: 3%;
+  flex-wrap: wrap;
 }
 
 .target-word-letters {
-  height: 6vw;
-  width: 6vw;
+  height: var(--target-size);
+  width: var(--target-size);
   margin: 1.5%;
   border-bottom: solid 5px black;
   display: flex;
@@ -204,13 +199,24 @@ h1 {
 }
 
 .show-text {
-  font-size: 6vw;
+  font-size: var(--target-size);
+}
+
+.remove-underline.show-text {
+  border-bottom: solid 0px white;
+  flex-basis: 100%;
+  color: rgba(255, 255, 255, 0);
+  max-height: 1px;
+  margin: 0;
+}
+
+.opaque {
+  opacity: 0%;
 }
 
 .letter-wrapper {
   display: flex;
   flex-grow: 1;
-  /* padding-bottom: 5%; */
 }
 
 .letter-container {
@@ -220,8 +226,8 @@ h1 {
 }
 
 .letters {
-  height: 6vw;
-  width: 6vw;
+  height: 5vw;
+  width: 5vw;
   min-height: 40px;
   min-width: 40px;
   background-color: lightblue;

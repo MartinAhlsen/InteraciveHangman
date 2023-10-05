@@ -1,29 +1,56 @@
 let grapeArray = [
-  "Merlot",
-  "Chardonnay",
-  "Syrah",
-  "Zinfandel",
-  "Riesling",
-  "Malbec",
-  "Grenache",
-  "Tempranillo",
-  "Viognier",
-  "Sangiovese",
-  "Muscat",
-  "Semillon",
-  "Verdejo",
-  "Marsanne",
-  "Zweigelt",
-  "Rondinella",
-  "Corvina",
-  "Sagrantino",
-  "Glera",
-  "Gammay",
+  "Cabernet Sauvignon",
+  // "Merlot",
+  // "Chardonnay",
+  // "Syrah",
+  // "Zinfandel",
+  // "Riesling",
+  // "Malbec",
+  // "Grenache",
+  // "Tempranillo",
+  // "Viognier",
+  // "Sangiovese",
+  // "Muscat",
+  // "Semillon",
+  // "Verdejo",
+  // "Marsanne",
+  // "Zweigelt",
+  // "Rondinella",
+  // "Corvina",
+  // "Sagrantino",
+  // "Glera",
+  // "Gammay",
 ];
+// let modifiedGrapeArray = [];
+// const replaceSpacesWithDashes = (anArray) => {
+//   for (let i = 0; i < anArray.length; i++) {
+//     if (anArray[i] === " ") {
+//       modifiedGrapeArray.append("-");
+//     } else {
+//       modifiedGrapeArray.append(anArray[i]);
+//     }
+//   }
+// };
+// replaceSpacesWithDashes(grapeArray);
+// console.log(modifiedGrapeArray);
+
+let modifiedGrapeArray = [];
+
+const replaceSpacesWithDashes = (anArray) => {
+  let modifiedArray = [];
+  for (let i = 0; i < anArray.length; i++) {
+    let modifiedString = anArray[i].replace(/ /g, "-");
+    modifiedArray.push(modifiedString);
+  }
+  return modifiedArray;
+};
+
+modifiedGrapeArray = replaceSpacesWithDashes(grapeArray);
+
 let correctGuesses = [];
 let targetRandomWord = "";
 let targetRandomWordLowerCase = null;
-let targetRandomWordUniqueLettersArray = null;
+let targetRandomWordUniqueLettersArray = [];
 let numberOfGames = 0;
 let numberOfVictories = 0;
 let guessesLeft = 10;
@@ -96,6 +123,9 @@ const generateTargetWordLetters = () => {
     newDiv.classList.add("target-word-letters");
     newDiv.classList.add(element.toUpperCase());
     newDiv.textContent = element.toUpperCase();
+    if (element === "-") {
+      newDiv.classList.add("show-text", "remove-underline");
+    }
     parentElement.appendChild(newDiv);
   });
   return parentElement;
@@ -165,6 +195,9 @@ const endOfGame = (result) => {
       element.classList.add("red");
     }
     element.classList.add("show-text");
+    if (element.classList.contains("remove-underline")) {
+      element.classList.add("opaque");
+    }
   });
   let gameEndMessageContainer = document.querySelector(".outcome-message");
   if (result) {
@@ -180,7 +213,7 @@ const endOfGame = (result) => {
 const startNewGame = () => {
   const generateNewGrape = () => {
     targetRandomWord =
-      grapeArray[Math.floor(Math.random() * grapeArray.length)];
+      modifiedGrapeArray[Math.floor(Math.random() * modifiedGrapeArray.length)];
   };
   const emptyTargetWord = () => {
     let targetLettersClassselector = document.querySelectorAll(
@@ -203,8 +236,18 @@ const startNewGame = () => {
   updateGuessesImages();
   generateNewGrape();
   targetRandomWordLowerCase = targetRandomWord.toLowerCase();
+  // targetRandomWordUniqueLettersArray = Array.from(
+  //   new Set(targetRandomWordLowerCase).filter((char) => /[a-z]/.test(char))
+  // );
+  // targetRandomWordUniqueLettersArray = new Set(
+  //   Array.from(targetRandomWordLowerCase).filter((char) => /[a-z]/.test(char))
+  // );
   targetRandomWordUniqueLettersArray = Array.from(
     new Set(targetRandomWordLowerCase)
+  ).filter((char) => /[a-z]/.test(char));
+  console.log("unique array " + targetRandomWordUniqueLettersArray);
+  console.log(
+    "unique array.length " + targetRandomWordUniqueLettersArray.length
   );
   emptyTargetWord();
   generateTargetWordLetters();
@@ -219,6 +262,8 @@ const gameLoop = (letter, targetElement) => {
     makeTargetLetterVisible(letter);
     if (!correctGuesses.includes(letter)) {
       correctGuesses.push(letter);
+      console.log("correct nr is :" + correctGuesses.length);
+      console.log("target nr is :" + targetRandomWordUniqueLettersArray.length);
     }
     if (didIWin()) {
       endOfGame(didIWin());
