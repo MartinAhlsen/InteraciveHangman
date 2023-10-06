@@ -241,7 +241,7 @@ const startNewGame = () => {
   const resetLetters = () => {
     let lettersClassselector = document.querySelectorAll(".letters");
     lettersClassselector.forEach((element) => {
-      element.classList.remove("true", "false");
+      element.classList.remove("true", "false", "clicked");
     });
   };
   correctGuesses = [];
@@ -272,23 +272,28 @@ const startNewGame = () => {
 };
 
 const gameLoop = (letter, targetElement) => {
-  if (doesItMatch(letter)) {
-    targetElement.classList.add("true");
-    makeTargetLetterVisible(letter);
-    if (!correctGuesses.includes(letter)) {
-      correctGuesses.push(letter);
-      console.log("correct nr is :" + correctGuesses.length);
-      console.log("target nr is :" + targetRandomWordUniqueLettersArray.length);
-    }
-    if (didIWin()) {
-      endOfGame(didIWin());
-    }
-  } else {
-    targetElement.classList.add("false");
-    guessesLeft -= 1;
-    updateGuessesImages();
-    if (!guessesLeft > 0) {
-      endOfGame(didIWin());
+  if (!targetElement.classList.contains("clicked")) {
+    targetElement.classList.add("clicked");
+    if (doesItMatch(letter)) {
+      targetElement.classList.add("true");
+      makeTargetLetterVisible(letter);
+      if (!correctGuesses.includes(letter)) {
+        correctGuesses.push(letter);
+        console.log("correct nr is :" + correctGuesses.length);
+        console.log(
+          "target nr is :" + targetRandomWordUniqueLettersArray.length
+        );
+      }
+      if (didIWin()) {
+        endOfGame(didIWin());
+      }
+    } else {
+      targetElement.classList.add("false");
+      guessesLeft -= 1;
+      updateGuessesImages();
+      if (!guessesLeft > 0) {
+        endOfGame(didIWin());
+      }
     }
   }
 };
