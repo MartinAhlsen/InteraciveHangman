@@ -305,6 +305,9 @@ const lettersClickable = () => {
     addNewEventListener(targetElement, "click", () => {
       gameLoop(letter, targetElement);
     });
+    // addNewEventListener(targetElement, "click", function() {
+    //   gameLoop(letter, targetElement);
+    // });
   }
 };
 

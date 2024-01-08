@@ -309,4 +309,8 @@ h1 {
   .show-text {
     font-size: var(--target-max-size);
   }
+
+  .letters {
+    font-size: x-large;
+  }
 }
